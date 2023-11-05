@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/n/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["autoclose.nvim"] = {
+    loaded = true,
+    path = "/home/n/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
+    url = "https://github.com/m4xshen/autoclose.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/n/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -126,6 +131,11 @@ _G.packer_plugins = {
     path = "/home/n/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/n/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   ["neodev.nvim"] = {
     loaded = true,
     path = "/home/n/.local/share/nvim/site/pack/packer/start/neodev.nvim",
@@ -150,6 +160,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/n/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/home/n/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
