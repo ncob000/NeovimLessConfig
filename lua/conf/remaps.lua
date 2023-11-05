@@ -10,6 +10,11 @@ vim.keymap.set("v", "<Up>", ":m '<-2<CR>gv=gv")         -- Move text up
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>c", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Trouble keymaps --
+vim.keymap.set("n", "<leader>tt", ":TroubleToggle <CR>")
+vim.keymap.set("n", "<leader>tc", ":TroubleClose <CR>")
+vim.keymap.set("n", "<leader>tr", ":TroubleRefresh <CR>")
+
 -- Telescope keymaps --
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})           -- project files --  

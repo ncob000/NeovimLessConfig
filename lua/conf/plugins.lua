@@ -1,17 +1,25 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
-  	use 'wbthomason/packer.nvim'
+   
+    use 'wbthomason/packer.nvim'
+    use "rebelot/kanagawa.nvim"
+    use 'nvim-lualine/lualine.nvim'
+    use 'nvim-tree/nvim-web-devicons'
+    use "lukas-reineke/indent-blankline.nvim"
+    use "folke/trouble.nvim"
+    use 'folke/neodev.nvim'
+    use 'marko-cerovac/material.nvim'
     use 'm4xshen/autoclose.nvim'
 
-  	use {
-  		'nvim-telescope/telescope.nvim', tag = '0.1.4',
-  		requires =  {
+     use{
+    	'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        requires =  {
             {'nvim-lua/plenary.nvim'},
             {'nvim-telescope/telescope-file-browser.nvim'},
         }
 	}
 	use {
-   		"mcchrish/zenbones.nvim",
+        "mcchrish/zenbones.nvim",
     		requires = "rktjmp/lush.nvim"
 	}
 	use {
@@ -39,6 +47,4 @@ return require('packer').startup(function(use)
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end, 
         ft = { "markdown" },
     })
-
-
 end)
