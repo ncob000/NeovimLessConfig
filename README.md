@@ -26,4 +26,4 @@ This configuration have the objective to be more simple and eficient using less 
 - autoclose
 - lsp-zero
 - zenbones -- colorscheme
-
+- telecope
