@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/n/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/n/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/n/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
