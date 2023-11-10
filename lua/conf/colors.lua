@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true -- Better colors
+vim.cmd("colorscheme github_dark_high_contrast")
 ------------------------------------------------------------------------------------------------------
 -- ZENBONES CONFIG:
 -- The next function is only for configure the zenbones colorscheme
@@ -9,14 +10,14 @@ vim.opt.termguicolors = true -- Better colors
 --
 -- the arguments needs to pass in ' ' or " "
 function Colors(colorscheme, background)
-vim.o.background = background
-Org = 'colorscheme theme'
-New = string.gsub(Org, 'theme', colorscheme) -- Remplacing theme for colorscheme variable content
-vim.cmd(New) -- theme asignation
-end;
+	vim.o.background = background
+	Org = "colorscheme theme"
+	New = string.gsub(Org, "theme", colorscheme) -- Remplacing theme for colorscheme variable content
+	vim.cmd(New) -- theme asignation
+end
 
 -- Function calling (not loaded)
-Colors('zenbones', 'dark')
+-- Colors('zenbones', 'dark')
 ------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------
@@ -71,4 +72,3 @@ Colors('zenbones', 'dark')
 
 --vim.g.material_style = "darker"
 --vim.cmd 'colorscheme material'
-

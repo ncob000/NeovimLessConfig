@@ -18,6 +18,7 @@ return require("packer").startup(function(use)
 	use("sindrets/winshift.nvim") -- manage windows
 	use("CRAG666/code_runner.nvim") -- Run code
 	use("rafamadriz/friendly-snippets") -- snippets
+	use("projekt0n/github-nvim-theme")
 
 	use({ "michaelb/sniprun", run = "sh ./install.sh" }) -- Run parts of the code
 	use({ "mcchrish/zenbones.nvim", requires = "rktjmp/lush.nvim" }) -- Another colorscheme
