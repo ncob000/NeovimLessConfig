@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true -- Better colors
-vim.cmd("colorscheme github_dark_high_contrast")
+-- vim.cmd("colorscheme github_dark_high_contrast")
 ------------------------------------------------------------------------------------------------------
 -- ZENBONES CONFIG:
 -- The next function is only for configure the zenbones colorscheme
@@ -9,15 +9,16 @@ vim.cmd("colorscheme github_dark_high_contrast")
 --          background  = background color (light, dark)
 --
 -- the arguments needs to pass in ' ' or " "
-function Colors(colorscheme, background)
-	vim.o.background = background
-	Org = "colorscheme theme"
-	New = string.gsub(Org, "theme", colorscheme) -- Remplacing theme for colorscheme variable content
-	vim.cmd(New) -- theme asignation
-end
+--function Colors(colorscheme, background)
+--	vim.o.background = background
+--	Org = "colorscheme theme"
+--	New = string.gsub(Org, "theme", colorscheme) -- Remplacing theme for colorscheme variable content
+--	vim.cmd(New) -- theme asignation
+--end
 
 -- Function calling (not loaded)
--- Colors('zenbones', 'dark')
+--vim.g.enfocado_style = "neon"
+--Colors("enfocado", "dark")
 ------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------
@@ -72,3 +73,34 @@ end
 
 --vim.g.material_style = "darker"
 --vim.cmd 'colorscheme material'
+--
+-- Lua:
+-- For dark theme (neovim's default)
+vim.o.background = "dark"
+local c = require("vscode.colors").get_colors()
+require("vscode").setup({
+	-- Alternatively set style in setup
+	-- style = 'light'
+
+	-- Enable transparent background
+	transparent = true,
+
+	-- Enable italic comment
+	italic_comments = true,
+
+	-- Disable nvim-tree background color
+	disable_nvimtree_bg = true,
+
+	-- Override colors (see ./lua/vscode/colors.lua)
+	color_overrides = {
+		vscLineNumber = "#FFFFFF",
+	},
+
+	-- Override highlight groups (see ./lua/vscode/theme.lua)
+	group_overrides = {
+		-- this supports the same val table as vim.api.nvim_set_hl
+		-- use colors from this colorscheme by requiring vscode.colors!
+		Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+	},
+})
+require("vscode").load()

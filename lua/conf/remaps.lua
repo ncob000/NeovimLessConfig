@@ -40,3 +40,6 @@ vim.keymap.set("n", "<leader>rf", ":RunFile toggleterm <CR>")
 
 -- Document code --
 vim.keymap.set("n", "<leader>gd", ":DogeGenerate <CR>")
+
+-- nvim tree --
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle <CR>")

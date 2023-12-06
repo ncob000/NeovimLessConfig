@@ -27,3 +27,5 @@ This configuration have the objective to be more simple and eficient using less 
 - lsp-zero
 - zenbones -- colorscheme
 - telecope
+
+
