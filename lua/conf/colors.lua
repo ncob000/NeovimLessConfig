@@ -1,4 +1,45 @@
 vim.opt.termguicolors = true -- Better colors
+require("eyes").setup({
+	--autoloads the colorscheme
+	autoload = true,
+	--changes the palette of the colorscheme
+	--"dark" or "light"
+	pallete = "light",
+
+	--toggles monochrome for these elements
+	toggle = {
+		diagnostics = true,
+		spell = true,
+		terminal = true,
+
+		plugins = {
+			cmp = true,
+			codeium = true,
+			dap = true,
+			devicons = true,
+			flash = true,
+			illuminate = true,
+			indent_blankline = true,
+			lazy = true,
+			leap = true,
+			mason = true,
+			mini_indentscope = true,
+			neo_tree = true,
+			noice = true,
+			notify = true,
+			null_ls = true,
+			telescope = true,
+			treesitter = true,
+			undotree = true,
+		},
+	},
+
+	--extends/overwrites highlights and palette
+	extend = {
+		highlights = {},
+		palette = {},
+	},
+})
 -- vim.cmd("colorscheme github_dark_high_contrast")
 ------------------------------------------------------------------------------------------------------
 -- ZENBONES CONFIG:
@@ -18,8 +59,12 @@ vim.opt.termguicolors = true -- Better colors
 
 -- Function calling (not loaded)
 --vim.g.enfocado_style = "neon"
---Colors("enfocado", "dark")
+--Colors("paramount", "dark")
 ------------------------------------------------------------------------------------------------------
+
+--require("noirbuddy").setup({
+--	preset = "minimal",
+--})
 
 ------------------------------------------------------------------------------------------------------
 -- KANAGAWA CONFIG:
@@ -76,31 +121,31 @@ vim.opt.termguicolors = true -- Better colors
 --
 -- Lua:
 -- For dark theme (neovim's default)
-vim.o.background = "dark"
-local c = require("vscode.colors").get_colors()
-require("vscode").setup({
-	-- Alternatively set style in setup
-	-- style = 'light'
+--vim.o.background = "dark"
+--local c = require("vscode.colors").get_colors()
+--require("vscode").setup({
+-- Alternatively set style in setup
+-- style = 'light'
 
-	-- Enable transparent background
-	transparent = true,
+-- Enable transparent background
+--	transparent = true,
 
-	-- Enable italic comment
-	italic_comments = true,
+-- Enable italic comment
+--	italic_comments = true,
 
-	-- Disable nvim-tree background color
-	disable_nvimtree_bg = true,
+-- Disable nvim-tree background color
+--	disable_nvimtree_bg = true,
 
-	-- Override colors (see ./lua/vscode/colors.lua)
-	color_overrides = {
-		vscLineNumber = "#FFFFFF",
-	},
+-- Override colors (see ./lua/vscode/colors.lua)
+-- 	color_overrides = {
+-- 		vscLineNumber = "#FFFFFF",
+-- 	},
 
-	-- Override highlight groups (see ./lua/vscode/theme.lua)
-	group_overrides = {
-		-- this supports the same val table as vim.api.nvim_set_hl
-		-- use colors from this colorscheme by requiring vscode.colors!
-		Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
-	},
-})
-require("vscode").load()
+-- Override highlight groups (see ./lua/vscode/theme.lua)
+-- 	group_overrides = {
+-- this supports the same val table as vim.api.nvim_set_hl
+-- use colors from this colorscheme by requiring vscode.colors!
+-- 		Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+-- 	},
+-- })
+-- require("vscode").load()

@@ -1,8 +1,3 @@
-require("orgmode").setup_ts_grammar()
-require("orgmode").setup({
-	org_agenda_files = "~/OrgFiles/agenda/*",
-	org_default_notes_file = "~/OrgFiles/default.org",
-})
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)
 	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "org" },
@@ -22,7 +17,7 @@ require("nvim-treesitter.configs").setup({
 
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = { "org" },
+
 		-- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
 		-- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
 		-- the name of the parser)
@@ -41,7 +36,7 @@ require("nvim-treesitter.configs").setup({
 		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = true,
 		autotag = {
-			enable = true,
+			enable = false,
 		},
 	},
 })

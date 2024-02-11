@@ -1,14 +1,18 @@
 vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim") -- packer manage itself
+	use("wbthomason/packer.nvim")
 
-	use("rebelot/kanagawa.nvim") -- colorscheme
+	use("andreasvc/vim-256noir")
+	use("amedoeyes/eyes.nvim")
+	use("rebelot/kanagawa.nvim")
 	use("Mofiqul/vscode.nvim")
 	use("projekt0n/github-nvim-theme")
-	use("marko-cerovac/material.nvim") -- another colorscheme
-
-	use("romgrk/barbar.nvim")
+	use("marko-cerovac/material.nvim")
+	use("owickstrom/vim-colors-paramount")
+	-- use("romgrk/barbar.nvim")
 	use("nvim-lualine/lualine.nvim") -- status line
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+
 	use("nvim-tree/nvim-web-devicons") -- icons
 	use("nvim-tree/nvim-tree.lua") -- file explorer
 	use("lukas-reineke/indent-blankline.nvim") -- color identation
@@ -36,7 +40,10 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "mcchrish/zenbones.nvim", requires = "rktjmp/lush.nvim" }) -- Another colorscheme
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- just treesitter
-
+	use({
+		"jesseleite/nvim-noirbuddy",
+		requires = { "tjdevries/colorbuddy.nvim", branch = "dev" },
+	})
 	use({
 		"kkoomen/vim-doge",
 		run = ":call doge#install()",
@@ -46,20 +53,6 @@ return require("packer").startup(function(use)
 		"gelguy/wilder.nvim",
 		config = function()
 			require("wilder").setup({ modes = { ":", "/", "?" } })
-		end,
-	})
-
-	use({
-		"nvim-orgmode/orgmode",
-		config = function()
-			require("orgmode").setup({})
-		end,
-	})
-
-	use({
-		"goolord/alpha-nvim",
-		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
 	})
 
@@ -79,6 +72,7 @@ return require("packer").startup(function(use)
 				"nvim-lua/plenary.nvim",
 				"nvim-telescope/telescope-file-browser.nvim",
 				"nvim-lua/popup.nvim",
+				"xiyaowong/telescope-emoji.nvim",
 			},
 		},
 	})
@@ -117,11 +111,11 @@ return require("packer").startup(function(use)
 	})
 
 	use({
-		"phaazon/hop.nvim",
-		branch = "v2", -- optional but strongly recommended
+		"jakewvincent/mkdnflow.nvim",
 		config = function()
-			-- you can configure Hop the way you like here; see :h hop-config
-			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+			require("mkdnflow").setup({
+				-- Config goes here; leave blank for defaults
+			})
 		end,
 	})
 end)
